@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>WDD 231 | Course Home</title>
+
+  <meta name="description" content="Course home page for WDD 231 showing student information and completed courses.">
+  <meta name="author" content="Raúl Moroni Capcha Cadillo">
+
+  <!-- Google Font (una sola familia) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- JavaScript -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+<header>
+  <div class="branding">
+    <img src="images/logo.png" alt="Site logo">
+    <span>Raúl Moroni Capcha Cadillo</span>
+  </div>
+  <button id="menu" aria-label="Toggle Navigation" aria-expanded="false">☰</button>
+</header>
+
+<nav id="nav">
+  <a href="index.html" class="active">Home</a>
+  <a href="#">Chamber Project</a>
+  <a href="#">Final Project</a>
+</nav>
+
+<main>
+  <h1>Home</h1>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      My name is Raúl and I am from Peru. I am currently studying industrial engineering and enjoy learning about technology and how it connects with modern society. I love exploring new tools that improve productivity and design. In my free time, I enjoy reading, learning programming, and spending time with friends and family.
+    </p>
+  </section>
+
+  <section class="photo">
+    <h2>Student Photo</h2>
+    <img src="images/profile.jpg" alt="Student portrait">
+  </section>
+
+  <section class="courses">
+    <h2>Web Certificate Courses</h2>
+
+    <div class="filters">
+      <button data-filter="all">All</button>
+      <button data-filter="cse">CSE</button>
+      <button data-filter="wdd">WDD</button>
+    </div>
+
+    <div id="course-list"></div>
+    <p id="credits"></p>
+  </section>
+</main>
+
+<footer>
+  <div class="social">
+    <a href="https://github.com/Moroni-owo">GitHub</a>
+    <a href="https://linkedin.com">LinkedIn</a>
+    <a href="#">X</a>
+  </div>
+
+  <p>
+    © <span id="year"></span> • Raúl Moroni • Peru
+  </p>
+
+  <p id="lastModified"></p>
+</footer>
+</body>
+</html>
