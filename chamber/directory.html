@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chamber of Commerce member directory">
+  <meta name="author" content="Raúl Moroni Capcha Cadillo">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Chamber of Commerce Directory">
+  <meta property="og:description" content="Business members of the Chamber of Commerce">
+  <meta property="og:image" content="images/business1.jpg">
+  <meta property="og:url" content="https://username.github.io/wdd231/chamber/directory.html">
+
+  <title>Directory | Chamber of Commerce</title>
+
+  <link rel="icon" href="images/favicon.ico">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+<header>
+  <h1>Chamber of Commerce</h1>
+  <nav>
+    <button id="menu">☰</button>
+    <ul class="navigation">
+      <li><a href="#">Home</a></li>
+      <li><a href="directory.html" class="active">Directory</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="view-buttons">
+    <button id="grid">Grid View</button>
+    <button id="list">List View</button>
+  </section>
+
+  <section id="members" class="grid"></section>
+</main>
+
+<footer>
+  <p>📍 Lima, Peru | 📞 (01) 555-1234 | ✉ info@chamberlima.org</p>
+  <p>
+    © <span id="year"></span> Chamber of Commerce |
+    Raúl Moroni Capcha Cadillo | WDD 231
+  </p>
+  <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
+
+<script src="scripts/directory.js"></script>
+</body>
+</html>

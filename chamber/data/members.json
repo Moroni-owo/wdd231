@@ -1,0 +1,60 @@
+{
+  "members": [
+    {
+      "name": "Tech Solutions SAC",
+      "address": "123 Main Avenue, Lima",
+      "phone": "(01) 555-1111",
+      "website": "https://techsolutions.pe",
+      "image": "business1.jpg",
+      "membership": "Gold"
+    },
+    {
+      "name": "Green Market",
+      "address": "456 Green Street, Lima",
+      "phone": "(01) 555-2222",
+      "website": "https://greenmarket.pe",
+      "image": "business2.jpg",
+      "membership": "Silver"
+    },
+    {
+      "name": "Andean Construction",
+      "address": "789 Andes Avenue, Lima",
+      "phone": "(01) 555-3333",
+      "website": "https://andeanconstruction.pe",
+      "image": "business3.jpg",
+      "membership": "Gold"
+    },
+    {
+      "name": "Central Coffee",
+      "address": "321 Central Road, Lima",
+      "phone": "(01) 555-4444",
+      "website": "https://centralcoffee.pe",
+      "image": "business4.jpg",
+      "membership": "Member"
+    },
+    {
+      "name": "Life Medical Services",
+      "address": "654 Health Avenue, Lima",
+      "phone": "(01) 555-5555",
+      "website": "https://lifemedical.pe",
+      "image": "business5.jpg",
+      "membership": "Silver"
+    },
+    {
+      "name": "Express Logistics",
+      "address": "777 Transport Avenue, Lima",
+      "phone": "(01) 555-6666",
+      "website": "https://expresslogistics.pe",
+      "image": "business6.jpg",
+      "membership": "Member"
+    },
+    {
+      "name": "Future Academy",
+      "address": "888 Education Avenue, Lima",
+      "phone": "(01) 555-7777",
+      "website": "https://futureacademy.pe",
+      "image": "business7.jpg",
+      "membership": "Gold"
+    }
+  ]
+}
