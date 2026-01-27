@@ -61,3 +61,30 @@ nav a {
 .card img {
   max-width: 100%;
 }
+
+/* ===== HERO HOME PAGE ===== */
+.hero {
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(135deg, #0a3d62, #1e5f8a);
+  padding: 4rem 1.5rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero-text {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}

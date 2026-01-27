@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Official Chamber of Commerce website for Lima, Peru">
+  <meta name="author" content="Raúl Moroni Capcha Cadillo">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Lima Chamber of Commerce">
+  <meta property="og:description" content="Supporting local businesses and economic growth in Lima, Peru">
+  <meta property="og:image" content="images/business1.jpg">
+  <meta property="og:url" content="https://username.github.io/wdd231/chamber/index.html">
+
+  <title>Home | Chamber of Commerce</title>
+
+  <link rel="icon" href="images/favicon.ico">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+<header>
+  <h1>Lima Chamber of Commerce</h1>
+  <nav>
+    <button id="menu">☰</button>
+    <ul class="navigation">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Welcome to the Lima Chamber of Commerce</h2>
+      <p>Connecting businesses. Strengthening our community.</p>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <h2>Join the Chamber</h2>
+    <p>Become part of a growing network of local businesses.</p>
+    <a href="#" class="cta-button">Join Now</a>
+  </section>
+
+  <!-- Events Section -->
+  <section class="events">
+    <h2>Upcoming Events</h2>
+    <ul>
+      <li>📅 Business Networking Night – March 15</li>
+      <li>📅 Small Business Workshop – April 5</li>
+      <li>📅 Annual Chamber Meeting – May 20</li>
+    </ul>
+  </section>
+
+  <!-- Spotlight Members -->
+  <section class="spotlights">
+    <h2>Featured Members</h2>
+
+    <div class="spotlight-grid">
+      <article class="spotlight">
+        <img src="images/business2.jpg" alt="Green Market storefront">
+        <h3>Green Market</h3>
+        <p>Sustainable products for a better future.</p>
+      </article>
+
+      <article class="spotlight">
+        <img src="images/business3.jpg" alt="Andean Construction building project">
+        <h3>Andean Construction</h3>
+        <p>Building Peru’s future with quality and trust.</p>
+      </article>
+
+      <article class="spotlight">
+        <img src="images/business4.jpg" alt="Central Coffee shop">
+        <h3>Central Coffee</h3>
+        <p>Local coffee, global flavor.</p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>📍 Lima, Peru | 📞 (01) 555-1234 | ✉ info@chamberlima.org</p>
+  <p>
+    © <span id="year"></span> Lima Chamber of Commerce |
+    Raúl Moroni Capcha Cadillo | WDD 231
+  </p>
+  <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("lastModified").textContent = document.lastModified;
+</script>
+
+</body>
+</html>
