@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join the Chamber</title>
+
+  <style>
+    main {
+      display: grid;
+      gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      main {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+      }
+    }
+
+    form {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      font-weight: 600;
+    }
+
+    input, select, textarea {
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .cards {
+      display: grid;
+      gap: 1rem;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      background: #f9f9f9;
+    }
+
+    .card a {
+      color: blue;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Chamber of Commerce</h1>
+  </header>
+
+  <nav>
+    <!-- your navigation -->
+  </nav>
+
+  <main>
+    <!-- FORM -->
+    <form method="get" action="thankyou.html">
+      <label>
+        First Name
+        <input type="text" name="fname" title="First Name" required autocomplete="given-name">
+      </label>
+
+      <label>
+        Last Name
+        <input type="text" name="lname" title="Last Name" required autocomplete="family-name">
+      </label>
+
+      <label>
+        Organizational Title
+        <input type="text" name="orgtitle" title="Organization Title"
+          autocomplete="organization-title"
+          pattern="[A-Za-z\- ]{7,}">
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" title="Email Address" required
+          autocomplete="email" placeholder="example@email.com">
+      </label>
+
+      <label>
+        Mobile Phone
+        <input type="tel" name="phone" title="Mobile Phone" required
+          autocomplete="tel">
+      </label>
+
+      <label>
+        Organization Name
+        <input type="text" name="organization" title="Organization Name" required
+          autocomplete="organization">
+      </label>
+
+      <label>
+        Membership Level
+        <select name="membership" required title="Membership Level">
+          <option value="">Select a level</option>
+          <option value="np">NP Membership</option>
+          <option value="bronze">Bronze Membership</option>
+          <option value="silver">Silver Membership</option>
+          <option value="gold">Gold Membership</option>
+        </select>
+      </label>
+
+      <label>
+        Organization Description
+        <textarea name="description" title="Business Description"></textarea>
+      </label>
+
+      <input type="hidden" id="timestamp" name="timestamp">
+
+      <input type="submit" value="Apply for Membership">
+    </form>
+
+    <!-- MEMBERSHIP CARDS -->
+    <section class="cards">
+      <div class="card">
+        <h3>NP Membership</h3>
+        <a onclick="document.getElementById('np').showModal()">View Benefits</a>
+      </div>
+
+      <div class="card">
+        <h3>Bronze Membership</h3>
+        <a onclick="document.getElementById('bronze').showModal()">View Benefits</a>
+      </div>
+
+      <div class="card">
+        <h3>Silver Membership</h3>
+        <a onclick="document.getElementById('silver').showModal()">View Benefits</a>
+      </div>
+
+      <div class="card">
+        <h3>Gold Membership</h3>
+        <a onclick="document.getElementById('gold').showModal()">View Benefits</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODALS -->
+  <dialog id="np"><p>No fee, community events.</p><button onclick="this.parentElement.close()">Close</button></dialog>
+  <dialog id="bronze"><p>Training & basic advertising.</p><button onclick="this.parentElement.close()">Close</button></dialog>
+  <dialog id="silver"><p>Event discounts & homepage spotlight.</p><button onclick="this.parentElement.close()">Close</button></dialog>
+  <dialog id="gold"><p>Premium advertising & VIP events.</p><button onclick="this.parentElement.close()">Close</button></dialog>
+
+  <footer>
+  <p>📍 Lima, Peru | 📞 (01) 555-1234 | ✉ info@chamberlima.org</p>
+  <p>
+    © <span id="year"></span> Chamber of Commerce |
+    Raul Moroni Capcha Cadillo | WDD 231
+  </p>
+  </footer>
+
+  <script>
+    document.getElementById("timestamp").value = new Date().toISOString();
+  </script>
+</body>
+</html>

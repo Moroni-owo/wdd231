@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Thank You</title>
+</head>
+<body>
+  <header>
+    <h1>Thank You for Joining!</h1>
+  </header>
+
+  <main>
+    <section id="results"></section>
+  </main>
+
+  <footer>
+    <p>&copy; Chamber of Commerce</p>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const output = `
+      <p><strong>First Name:</strong> ${params.get("fname")}</p>
+      <p><strong>Last Name:</strong> ${params.get("lname")}</p>
+      <p><strong>Email:</strong> ${params.get("email")}</p>
+      <p><strong>Phone:</strong> ${params.get("phone")}</p>
+      <p><strong>Organization:</strong> ${params.get("organization")}</p>
+      <p><strong>Date Submitted:</strong> ${params.get("timestamp")}</p>
+    `;
+    document.getElementById("results").innerHTML = output;
+  </script>
+</body>
+</html>
