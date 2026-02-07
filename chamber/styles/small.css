@@ -1,15 +1,31 @@
+/* ===== BASE ===== */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
 }
 
-header, footer {
+/* ===== HEADER & FOOTER ===== */
+header {
   background-color: #003366;
   color: white;
   padding: 1rem;
   text-align: center;
 }
 
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: white;
+}
+
+footer {
+  background-color: #003366;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* ===== NAVIGATION ===== */
 nav ul {
   list-style: none;
   padding: 0;
@@ -23,6 +39,7 @@ nav ul.show {
 nav a {
   color: white;
   text-decoration: none;
+  padding: 0.5rem;
 }
 
 #menu {
@@ -32,6 +49,7 @@ nav a {
   font-size: 1.5rem;
 }
 
+/* ===== VIEW BUTTONS ===== */
 .view-buttons {
   text-align: center;
   margin: 1rem;
@@ -41,6 +59,7 @@ nav a {
   margin: 0.5rem;
 }
 
+/* ===== MEMBERS DIRECTORY ===== */
 #members.grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -52,6 +71,7 @@ nav a {
   display: block;
 }
 
+/* ===== CARD SHARED ===== */
 .card {
   border: 1px solid #ccc;
   padding: 1rem;
@@ -59,10 +79,11 @@ nav a {
 }
 
 .card img {
-  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
-/* ===== HERO HOME PAGE ===== */
+/* ===== HERO (HOME PAGE ONLY) ===== */
 .hero {
   width: 100%;
   margin: 0;
@@ -88,3 +109,37 @@ nav a {
   line-height: 1.6;
   opacity: 0.95;
 }
+
+/* ===== DISCOVER PAGE ===== */
+.cards {
+  display: grid;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+  gap: 1rem;
+}
+
+.visit {
+  background: #f4f4f4;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+nav {
+  background-color: #003366;
+  padding: 0.5rem 0;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+
+
+
