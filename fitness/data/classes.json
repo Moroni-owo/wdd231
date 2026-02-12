@@ -1,0 +1,17 @@
+[
+  { "name": "Personal Training", "type": "Strength", "duration": "60 min", "level": "All Levels", "trainer": "Alex" },
+  { "name": "Group Fitness", "type": "Cardio", "duration": "45 min", "level": "Beginner", "trainer": "Maria" },
+  { "name": "HIIT Blast", "type": "Cardio", "duration": "30 min", "level": "Advanced", "trainer": "John" },
+  { "name": "Strength Basics", "type": "Strength", "duration": "50 min", "level": "Beginner", "trainer": "Alex" },
+  { "name": "Core Training", "type": "Strength", "duration": "40 min", "level": "Intermediate", "trainer": "Laura" },
+  { "name": "Yoga Flow", "type": "Flexibility", "duration": "60 min", "level": "All Levels", "trainer": "Sofia" },
+  { "name": "Cross Training", "type": "Strength", "duration": "55 min", "level": "Advanced", "trainer": "John" },
+  { "name": "Cardio Burn", "type": "Cardio", "duration": "45 min", "level": "Intermediate", "trainer": "Maria" },
+  { "name": "Functional Training", "type": "Strength", "duration": "50 min", "level": "All Levels", "trainer": "Alex" },
+  { "name": "Bootcamp", "type": "Cardio", "duration": "60 min", "level": "Advanced", "trainer": "Laura" },
+  { "name": "Pilates", "type": "Flexibility", "duration": "50 min", "level": "Beginner", "trainer": "Sofia" },
+  { "name": "Mobility Training", "type": "Flexibility", "duration": "40 min", "level": "All Levels", "trainer": "Sofia" },
+  { "name": "Endurance Run", "type": "Cardio", "duration": "60 min", "level": "Advanced", "trainer": "John" },
+  { "name": "Strength Max", "type": "Strength", "duration": "70 min", "level": "Advanced", "trainer": "Alex" },
+  { "name": "Recovery Session", "type": "Flexibility", "duration": "30 min", "level": "All Levels", "trainer": "Laura" }
+]

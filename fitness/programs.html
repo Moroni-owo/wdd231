@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Fitness Programs | Peak Performance Fitness Studio</title>
+  <meta name="description" content="Explore our fitness programs including personal training, group classes, cardio and strength sessions. Find the perfect program for you.">
+  <meta name="author" content="Raúl Moroni Capcha Cadillo">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Fitness Programs | Peak Performance">
+  <meta property="og:description" content="Discover our personalized training programs and group classes.">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- JavaScript Module -->
+  <script src="js/main.js" type="module" defer></script>
+</head>
+<body>
+
+  <!-- Header with Navigation -->
+  <header class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo" aria-label="Peak Performance Fitness Studio - Home">
+          <img src="images/favicon.png" alt="Logo" class="logo-img">
+          <span class="logo-text">Peak Performance</span>
+        </a>
+        
+        <nav class="main-nav" aria-label="Main navigation">
+          <button 
+            id="menu-toggle" 
+            class="menu-toggle" 
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="nav-links">
+            <span class="menu-icon"></span>
+          </button>
+          
+          <ul id="nav-links" class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="programs.html" class="nav-link active" aria-current="page">Programs</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">Our Programs</h1>
+        <p class="page-subtitle">Find the perfect program to reach your fitness goals</p>
+      </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section" aria-label="Program filters">
+      <div class="container">
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="Strength">Strength</button>
+          <button class="filter-btn" data-filter="Cardio">Cardio</button>
+          <button class="filter-btn" data-filter="Flexibility">Flexibility</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs-section section" aria-labelledby="programs-heading">
+      <div class="container">
+        <h2 id="programs-heading" class="sr-only">Available programs list</h2>
+        
+        <!-- Loading State -->
+        <div id="loading" class="loading" aria-live="polite">
+          <div class="spinner"></div>
+          <p>Loading programs...</p>
+        </div>
+        
+        <!-- Programs Grid -->
+        <div id="programs" class="programs-grid" role="list"></div>
+        
+        <!-- Error State -->
+        <div id="error" class="error-message" role="alert" hidden>
+          <p>Sorry, we couldn't load the programs. Please try again later.</p>
+        </div>
+        
+        <!-- Empty State -->
+        <div id="empty" class="empty-state" hidden>
+          <p>No programs found with the selected filters.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal for Program Details -->
+  <dialog id="modal" class="modal" aria-labelledby="modal-title" aria-describedby="modal-content">
+    <div class="modal-content">
+      <header class="modal-header">
+        <h3 id="modal-title" class="modal-title"></h3>
+        <button 
+          id="closeModal" 
+          class="modal-close"
+          aria-label="Close modal"
+          type="button">
+          ✕
+        </button>
+      </header>
+      <div class="modal-body">
+        <p id="modal-content" class="modal-text"></p>
+        <div id="modal-details" class="modal-details"></div>
+      </div>
+      <footer class="modal-footer">
+        <button id="modal-cta" class="btn btn-primary">Book Class</button>
+      </footer>
+    </div>
+  </dialog>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <p class="footer-text">&copy; 2026 Peak Performance Fitness Studio. All rights reserved.</p>
+          <p class="footer-author">Developed by Raúl Moroni Capcha Cadillo</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="attributions.html" class="footer-link">Attributions</a>
+          <a href="site-plan.html" class="footer-link">Site Plan</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Skip to top button -->
+  <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" hidden>
+    ↑
+  </button>
+
+</body>
+</html>

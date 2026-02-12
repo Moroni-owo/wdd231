@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Submission | Peak Performance Fitness Studio</title>
+  <meta name="description" content="Your message has been received successfully.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <style>
+    .submission-container {
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .success-icon {
+      text-align: center;
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      color: #3cb371;
+    }
+    
+    .submission-title {
+      text-align: center;
+      color: #1e3a5f;
+      margin-bottom: 1rem;
+    }
+    
+    .submission-subtitle {
+      text-align: center;
+      color: #6c757d;
+      margin-bottom: 2rem;
+    }
+    
+    .data-display {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+    
+    .data-item {
+      display: flex;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #dee2e6;
+    }
+    
+    .data-item:last-child {
+      border-bottom: none;
+    }
+    
+    .data-label {
+      font-weight: 600;
+      color: #1e3a5f;
+      min-width: 150px;
+    }
+    
+    .data-value {
+      color: #212529;
+      flex: 1;
+    }
+    
+    .actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+    
+    .btn {
+      padding: 0.75rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 250ms ease;
+    }
+    
+    .btn-primary {
+      background: #3cb371;
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background: #2d8f56;
+      transform: translateY(-2px);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: #1e3a5f;
+      border: 2px solid #1e3a5f;
+    }
+    
+    .btn-secondary:hover {
+      background: #1e3a5f;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <div class="submission-container">
+      <div class="success-icon">✓</div>
+      
+      <h1 class="submission-title">Thank You!</h1>
+      <p class="submission-subtitle">Your message has been received successfully.</p>
+      
+      <div class="data-display">
+        <h2 style="color: #1e3a5f; margin-bottom: 1rem;">Submitted Information:</h2>
+        <div id="form-data">
+          <!-- Data will be populated by JavaScript -->
+        </div>
+      </div>
+      
+      <div class="actions">
+        <a href="index.html" class="btn btn-primary">Return Home</a>
+        <a href="programs.html" class="btn btn-secondary">View Programs</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Get URL parameters and display them
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const formDataContainer = document.getElementById('form-data');
+      
+      // Define labels for form fields
+      const fieldLabels = {
+        name: 'Name',
+        email: 'Email',
+        training: 'Preferred Training',
+        message: 'Message'
+      };
+      
+      // Check if there are any parameters
+      if (urlParams.toString() === '') {
+        formDataContainer.innerHTML = '<p style="color: #6c757d; text-align: center;">No form data received.</p>';
+        return;
+      }
+      
+      // Display each parameter
+      let html = '';
+      for (const [key, value] of urlParams.entries()) {
+        const label = fieldLabels[key] || key.charAt(0).toUpperCase() + key.slice(1);
+        const displayValue = value || '<em style="color: #6c757d;">(not provided)</em>';
+        
+        html += `
+          <div class="data-item">
+            <span class="data-label">${label}:</span>
+            <span class="data-value">${displayValue}</span>
+          </div>
+        `;
+      }
+      
+      formDataContainer.innerHTML = html;
+      
+      // Store submission in localStorage for record
+      try {
+        const submissions = JSON.parse(localStorage.getItem('form_submissions') || '[]');
+        submissions.push({
+          data: Object.fromEntries(urlParams),
+          timestamp: new Date().toISOString()
+        });
+        localStorage.setItem('form_submissions', JSON.stringify(submissions));
+      } catch (error) {
+        console.error('Error saving to localStorage:', error);
+      }
+    });
+  </script>
+
+</body>
+</html>

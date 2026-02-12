@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Peak Performance Fitness Studio | Personal Training & Group Classes</title>
+  <meta name="description" content="Professional fitness studio with personal training, group classes, and healthy lifestyle coaching. Train smarter, live healthier.">
+  <meta name="author" content="Raúl Moroni Capcha Cadillo">
+  <meta name="keywords" content="fitness, personal training, gym, group classes, cardio, strength">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://peakperformancefitness.com/">
+  <meta property="og:title" content="Peak Performance Fitness Studio">
+  <meta property="og:description" content="Train smarter. Live healthier. Join our professional fitness programs.">
+  <meta property="og:image" content="images/og-image.jpg">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Peak Performance Fitness Studio">
+  <meta name="twitter:description" content="Train smarter. Live healthier.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- JavaScript Module -->
+  <script src="js/main.js" type="module" defer></script>
+</head>
+<body>
+  
+  <!-- Header with Navigation -->
+  <header class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo" aria-label="Peak Performance Fitness Studio - Home">
+          <img src="images/favicon.png" alt="Logo" class="logo-img">
+          <span class="logo-text">Peak Performance</span>
+        </a>
+        
+        <nav class="main-nav" aria-label="Main navigation">
+          <button 
+            id="menu-toggle" 
+            class="menu-toggle" 
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="nav-links">
+            <span class="menu-icon"></span>
+          </button>
+          
+          <ul id="nav-links" class="nav-links">
+            <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+            <li><a href="programs.html" class="nav-link">Programs</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <h1 id="hero-heading" class="hero-title">Train Smarter.<br>Live Healthier.</h1>
+        <p class="hero-subtitle">We help you reach your fitness goals through professional coaching and personalized training programs.</p>
+        <div class="hero-actions">
+          <a href="programs.html" class="btn btn-primary">View Programs</a>
+          <a href="#contact" class="btn btn-secondary">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission section" aria-labelledby="mission-heading">
+      <div class="container">
+        <h2 id="mission-heading" class="section-title">Our Mission</h2>
+        <p class="section-description">
+          Our mission is to provide high-quality fitness training that empowers individuals to improve their health, 
+          build confidence, and maintain an active lifestyle through expert guidance and ongoing motivation.
+        </p>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features section" aria-labelledby="features-heading">
+      <div class="container">
+        <h2 id="features-heading" class="section-title">Why Choose Us?</h2>
+        <div class="features-grid">
+          
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">💪</div>
+            <h3 class="feature-title">Certified Trainers</h3>
+            <p class="feature-description">Professionals with years of experience in strength training and cardiovascular conditioning.</p>
+          </article>
+          
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🎯</div>
+            <h3 class="feature-title">Personalized Programs</h3>
+            <p class="feature-description">Training plans tailored to your goals, level, and specific needs.</p>
+          </article>
+          
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🏆</div>
+            <h3 class="feature-title">Proven Results</h3>
+            <p class="feature-description">Evidence-based methodology to achieve real and sustainable results.</p>
+          </article>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 id="contact-heading" class="section-title">Contact Us</h2>
+        <p class="section-description">Ready to start your transformation? Send us a message and we'll get back to you.</p>
+        
+        <form 
+          action="form-action.html" 
+          method="get" 
+          class="contact-form"
+          novalidate>
+          
+          <div class="form-group">
+            <label for="name" class="form-label">Name <span class="required">*</span></label>
+            <input 
+              type="text" 
+              id="name"
+              name="name" 
+              class="form-input"
+              required
+              autocomplete="name"
+              aria-required="true">
+            <span class="form-error" id="name-error" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email <span class="required">*</span></label>
+            <input 
+              type="email" 
+              id="email"
+              name="email" 
+              class="form-input"
+              required
+              autocomplete="email"
+              aria-required="true">
+            <span class="form-error" id="email-error" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="training" class="form-label">Preferred Training Type</label>
+            <select 
+              id="training"
+              name="training" 
+              class="form-select">
+              <option value="">Select an option</option>
+              <option value="personal">Personal Training</option>
+              <option value="group">Group Classes</option>
+              <option value="cardio">Cardio</option>
+              <option value="strength">Strength</option>
+              <option value="flexibility">Flexibility</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea 
+              id="message"
+              name="message" 
+              class="form-textarea"
+              rows="5"
+              placeholder="Tell us about your fitness goals..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <p class="footer-text">&copy; 2026 Peak Performance Fitness Studio. All rights reserved.</p>
+          <p class="footer-author">Developed by Raúl Moroni Capcha Cadillo</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="attributions.html" class="footer-link">Attributions</a>
+          <a href="site-plan.html" class="footer-link">Site Plan</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Skip to top button -->
+  <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" hidden>
+    ↑
+  </button>
+
+</body>
+</html>
